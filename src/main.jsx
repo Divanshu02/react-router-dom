@@ -59,6 +59,7 @@ const router = createBrowserRouter(
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="github" loader={githubLoader} element={<Github />} />
+        {/* when user will hover on this github route, loader 'll be executed and githubLoader fn 'll be called. So it fetches the data before visiting the route which increases the app performance */}
         <Route path="user/:id" element={<User />} />
       </Route>
     </>
